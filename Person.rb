@@ -19,3 +19,5 @@ class Person
     end
     
 end
+
+Class Student 
