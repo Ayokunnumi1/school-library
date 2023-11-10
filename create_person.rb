@@ -9,11 +9,11 @@ def create_student(name, age)
   puts 'Has parent permission? [y/n]:'
   parent_permission_input = gets.chomp.downcase
   parent_permission = parent_permission_input == 'y'
-  Student.new(age, classroom, name, parent_permission: parent_permission)
+  Student.new(age, classroom, name: name, parent_permission: parent_permission)
 end
 
 def create_teacher(name, age)
   puts 'Enter the person\'s specialization:'
   specialization = gets.chomp
-  Teacher.new(age, specialization, name, parent_permission: true)
+  Teacher.new(age, specialization, name: name, parent_permission: true)
 end
