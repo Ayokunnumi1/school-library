@@ -1,5 +1,3 @@
-require_relative 'display_menu'
-
 private
 
   def display_menu

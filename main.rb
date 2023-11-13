@@ -1,4 +1,5 @@
 require_relative 'app'
+require_relative 'display_menu'
 
 class Main
   def initialize
@@ -21,10 +22,6 @@ class Main
       handle_choice(choice)
     end
   end
-
-  
-
-  
 
   def quit
     puts 'Thank you for using School Library. Goodbye!'
