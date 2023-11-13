@@ -22,15 +22,6 @@ class Main
       handle_choice(choice)
     end
   end
-
-  def quit
-    puts 'Thank you for using School Library. Goodbye!'
-    exit
-  end
-
-  def invalid_choice
-    puts 'Invalid choice. Please try again.'
-  end
 end
 
 Main.new.main

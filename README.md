@@ -161,6 +161,12 @@ npm run test
 - Twitter: [@Ayokunnumi](https://twitter.com/AyokunnumiA)
 - LinkedIn: [@Ayokunnumi](https://www.linkedin.com/in/ayokunnumiomololu)
 
+👤 **Manezeu Patricia Chrystelle**
+
+- GitHub: [@githubhandle](https://github.com/patriciachrysy)
+- Twitter: [@twitterhandle](https://twitter.com/ManezeuP)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/manezeu-patricia-chrystelle/)
+
 
 <!-- ## 🔭 Future Features <a name="future-features"></a>
 
