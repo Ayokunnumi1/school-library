@@ -1,3 +1,4 @@
+require 'json'
 require './nameable'
 require './capitalize_decorator'
 require './trimmer_decorator'
@@ -9,7 +10,7 @@ class Person < Nameable
 
   def initialize(age, name: 'Unknown', parent_permission: true)
     super()
-    @id = rand(1..1000)
+    @id = nil
     @name = name
     @age = age
     @parent_permission = parent_permission
@@ -26,6 +27,28 @@ class Person < Nameable
 
   def can_use_services?
     of_age? || @parent_permission
+  end
+
+  def to_json(*args)
+    {
+      id: @id,
+      type: self.class.to_s.downcase,
+      age: @age,
+      name: @name,
+      rentals: @rentals.map(&:to_json)
+    }.to_json(*args)
+  end
+
+  def self.from_json(json)
+    data = JSON.parse(json)
+    person = Person.new(data['age'], data['name'])
+    person.assign_id(data['id']) # Assign the ID from the JSON data
+    data['rentals'].each do |rental_data|
+      rental = Rental.from_json(rental_data)
+      rental.person = person
+      person.rentals << rental
+    end
+    person
   end
 
   private
