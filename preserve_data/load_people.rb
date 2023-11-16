@@ -1,5 +1,5 @@
-require_relative 'student'
-require_relative 'teacher'
+require_relative '../student'
+require_relative '../teacher'
 
 def load_people
   file_path = "#{DATA_PATH}/people.json"

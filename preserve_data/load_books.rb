@@ -1,7 +1,7 @@
 require 'fileutils'
 
 DATA_PATH = './data'.freeze
-Fileutils.mkdir_p(DATA_PATH)
+FileUtils.mkdir_p(DATA_PATH)
 
 def load_books
     file_path = "#{DATA_PATH}/books.json"
