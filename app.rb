@@ -1,3 +1,4 @@
+require 'json'
 require_relative 'book'
 require_relative 'person'
 require_relative 'rental'
@@ -5,6 +6,13 @@ require_relative 'student'
 require_relative 'teacher'
 require_relative 'create_person'
 require_relative 'create_rental'
+require_relative './preserve_data/load_books'
+require_relative './preserve_data/load_people'
+require_relative './preserve_data/load_rentals'
+require_relative './preserve_data/save_books'
+require_relative './preserve_data/save_people'
+require_relative './preserve_data/save_rentals'
+
 
 class App
   attr_accessor :books, :people, :rentals
@@ -13,7 +21,21 @@ class App
     @books = []
     @people = []
     @rentals = []
+    load_data
   end
+
+  def load_data
+    load_books
+    load_people
+    load_rentals
+  end
+
+  def save_data
+    save_books
+    save_people
+    save_rentals
+  end
+
 
   def list_all_books
     puts 'List of all books:'
