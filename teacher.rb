@@ -8,4 +8,8 @@ class Teacher < Person
   def can_use_services?
     true
   end
+
+  def assign_id(id)
+    @id = id
+  end
 end
