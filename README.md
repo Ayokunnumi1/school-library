@@ -155,7 +155,11 @@ npm run test
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Ayokunnumi Omololu**
 
+- GitHub: [@Ayokunnumi1](https://github.com/Ayokunnumi1)
+- Twitter: [@Ayokunnumi](https://twitter.com/AyokunnumiA)
+- LinkedIn: [@Ayokunnumi](https://www.linkedin.com/in/ayokunnumiomololu)
 
 👤 **Manezeu Patricia Chrystelle**
 
