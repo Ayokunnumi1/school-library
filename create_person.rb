@@ -24,7 +24,6 @@ def create_teacher(name, age)
   puts 'Enter the person\'s specialization:'
   specialization = gets.chomp
 
-
   # Load existing teachers from the JSON file
   existing_ids = @people.map(&:id)
 

@@ -13,7 +13,6 @@ require_relative 'preserve_data/save_books'
 require_relative 'preserve_data/save_people'
 require_relative 'preserve_data/save_rentals'
 
-
 class App
   attr_accessor :books, :people, :rentals
 
