@@ -6,12 +6,12 @@ require_relative 'student'
 require_relative 'teacher'
 require_relative 'create_person'
 require_relative 'create_rental'
-require_relative './preserve_data/load_books'
-require_relative './preserve_data/load_people'
-require_relative './preserve_data/load_rentals'
-require_relative './preserve_data/save_books'
-require_relative './preserve_data/save_people'
-require_relative './preserve_data/save_rentals'
+require_relative 'preserve_data/load_books'
+require_relative 'preserve_data/load_people'
+require_relative 'preserve_data/load_rentals'
+require_relative 'preserve_data/save_books'
+require_relative 'preserve_data/save_people'
+require_relative 'preserve_data/save_rentals'
 
 
 class App
