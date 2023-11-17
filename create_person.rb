@@ -1,6 +1,6 @@
-require_relative './student'
-require_relative './teacher'
-require_relative './classroom'
+require_relative 'student'
+require_relative 'teacher'
+require_relative 'classroom'
 
 def create_student(name, age)
   puts 'Enter the person\'s classroom:'
@@ -16,7 +16,7 @@ def create_student(name, age)
 
   unique_id = generate_unique_id_for_new_person(existing_ids)
 
-  student = Student.new(age, classroom, name: name, parent_permission: parent_permission)
+  student = Student.new(age, classroom, name, parent_permission: parent_permission)
 
   student.assign_id(unique_id)
   student
@@ -32,7 +32,7 @@ def create_teacher(name, age)
 
   unique_id = generate_unique_id_for_new_person(existing_ids)
 
-  teacher = Teacher.new(age, specialization, name: name, parent_permission: true)
+  teacher = Teacher.new(age, specialization, name, parent_permission: true)
 
   teacher.assign_id(unique_id)
   teacher
