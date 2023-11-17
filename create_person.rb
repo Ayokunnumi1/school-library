@@ -35,4 +35,10 @@ def create_teacher(name, age)
   teacher
 end
 
+def generate_unique_id_for_new_person(existing_ids)
+  new_id = Random.rand(1..1000)
+
+  new_id = Random.rand(1..1000) while existing_ids.include?(new_id)
+
+  new_id
 end
