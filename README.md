@@ -157,6 +157,8 @@ npm run test
 
 👤 **Ayokunnumi Omololu**
 
+👤 **Ayokunnumi Omololu**
+
 - GitHub: [@Ayokunnumi1](https://github.com/Ayokunnumi1)
 - Twitter: [@Ayokunnumi](https://twitter.com/AyokunnumiA)
 - LinkedIn: [@Ayokunnumi](https://www.linkedin.com/in/ayokunnumiomololu)
