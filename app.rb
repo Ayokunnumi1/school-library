@@ -36,7 +36,6 @@ class App
     save_rentals
   end
 
-
   def list_all_books
     puts 'List of all books:'
     @books.each do |book|
