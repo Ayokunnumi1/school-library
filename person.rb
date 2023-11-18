@@ -1,19 +1,23 @@
+require 'json'
 require './nameable'
 require './capitalize_decorator'
 require './trimmer_decorator'
-require 'securerandom'
 
 class Person < Nameable
   attr_accessor :name, :age, :rentals
   attr_reader :id
 
-  def initialize(age, name: 'Unknown', parent_permission: true)
+  def initialize(age, name = 'Unknown', parent_permission: true)
     super()
-    @id = rand(1..1000)
+    @id = nil
     @name = name
     @age = age
     @parent_permission = parent_permission
     @rentals = []
+  end
+
+  def assign_id(id)
+    @id = id
   end
 
   def correct_name
@@ -24,14 +28,37 @@ class Person < Nameable
     Rental.new(date, book, self)
   end
 
-  def can_use_services?
-    of_age? || @parent_permission
+  def to_json(*args)
+    {
+      id: @id,
+      type: self.class.to_s.downcase,
+      age: @age,
+      name: @name,
+      rentals: @rentals.map { |rental| { date: rental.date, book_id: rental.book.id, person_id: rental.person.id } }
+      # rentals: @rentals.map(&:to_json)
+    }.to_json(*args)
+  end
+
+  def self.from_json(json)
+    data = JSON.parse(json)
+    person = Person.new(data['age'], data['name'])
+    person.assign_id(data['id']) # Assign the ID from the JSON data
+    data['rentals'].each do |rental_data|
+      rental = Rental.from_json(rental_data)
+      rental.person = person
+      person.rentals << rental
+    end
+    person
   end
 
   private
 
   def of_age?
     age >= 18
+  end
+
+  def can_use_services?
+    of_age? || @parent_permission
   end
 end
 
